@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Navbar from "@/app/components/Navbar";
 
 export default function Calculator() {
@@ -39,10 +39,13 @@ export default function Calculator() {
     };
 
     return (
-        <div className="h-screen bg-cover bg-center flex flex-col" style={{ backgroundImage: "url('/background.png')" }}>
-            <header>
-                <Navbar />
+        <div className="min-h-screen bg-fixed bg-center bg-cover flex flex-col" style={{ backgroundImage: "url('/background.png')" }}>
+            <Navbar />
+
+            <header className="text-white text-center py-10 px-4">
+                <h1 className="text-4xl md:text-5xl font-extrabold" style={{textShadow: '2px 2px 2px black'}}>Oblicz zużycie enegrii w swoim domu</h1>
             </header>
+
             <div className="flex flex-row gap-8 max-w-7xl mx-auto p-4">
                 <div className="flex-1 grid grid-cols-[2fr_1fr]  grid-rows-[auto_1fr] gap-4 items-start">
                     <div className="col-span-2 flex gap-4 rounded-2xl">
