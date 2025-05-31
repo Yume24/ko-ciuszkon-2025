@@ -1,9 +1,9 @@
 import { AiFillPlayCircle } from "react-icons/ai";
 
 
-function StartButton()
+function StartButton({ onClick })
 {
-    return <div className="w-60 m-4
+    return <div onClick={ onClick } className="w-60 m-4
                             border-[var(--hunter-green)]
                             rounded-3xl border-4 p-4
                             bg-[var(--yellow-green)]
