@@ -8,7 +8,9 @@
     --parchment: #f2e8cfff;
     --bittersweet-shimmer: #bc4749ff;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     background-color: #f7fee7;
 }
