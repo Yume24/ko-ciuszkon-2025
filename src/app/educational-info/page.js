@@ -3,140 +3,58 @@ import Navbar from "@/app/components/Navbar";
 
 export default function EducationalInfo() {
     return (
-        <>
-            <style>{`
-        body {
-          font-family: 'Comic Sans MS', cursive, sans-serif;
-          background-color: #e6f7ec;
-          color: #333;
-          margin: 0;
-          padding: 0;
-        }
-        header {
-          background-color: #81c784;
-          color: white;
-          text-align: center;
-          padding: 2rem;
-        }
-        nav {
-          background-color: #c8e6c9;
-          display: flex;
-          justify-content: center;
-          padding: 1rem 0;
-        }
-        nav ul {
-          list-style: none;
-          display: flex;
-          gap: 1.5rem;
-          padding: 0;
-          margin: 0;
-        }
-        nav a {
-          text-decoration: none;
-          color: #2e7d32;
-          font-weight: bold;
-          font-size: 1.1rem;
-        }
-        main {
-          padding: 2rem;
-        }
-        section {
-          background-color: white;
-          margin-bottom: 2rem;
-          padding: 1.5rem;
-          border-radius: 15px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        section h2 {
-          font-size: 1.6rem;
-          color: #388e3c;
-        }
-        img {
-          max-width: 100%;
-          border-radius: 10px;
-          margin-top: 1rem;
-        }
-        ul {
-          padding-left: 1.5rem;
-        }
-        button {
-          padding: 1rem 2rem;
-          font-size: 1.2rem;
-          background-color: #4caf50;
-          color: white;
-          border: none;
-          border-radius: 10px;
-          cursor: pointer;
-          transition: background-color 0.3s;
-        }
-        button:hover {
-          background-color: #388e3c;
-        }
-        footer {
-          text-align: center;
-          background-color: #a5d6a7;
-          padding: 1rem;
-          color: #2e7d32;
-          font-weight: bold;
-        }
-        @media (max-width: 600px) {
-          nav ul {
-            flex-direction: column;
-            align-items: center;
-          }
-          button {
-            width: 100%;
-          }
-        }
-      `}</style>
+        <div className="min-h-screen bg-[#e6f7ec] text-[#333]">
             <Navbar />
-            <header>
-                <h1>🌍 Ekologia i Energetyka</h1>
-                <p>Zrozum świat wokół nas – łatwo i ciekawie!</p>
+
+            <header className="bg-[#81c784] text-white text-center py-10 px-4">
+                <h1 className="text-4xl md:text-5xl font-extrabold">🌍 Ekologia i Energetyka</h1>
+                <p className="mt-2 text-lg md:text-xl">Zrozum świat wokół nas – łatwo i ciekawie!</p>
             </header>
 
-            <nav>
-                <ul>
-                    <li><a href="#ekologia">Ekologia</a></li>
-                    <li><a href="#energia">Energia</a></li>
-                    <li><a href="#odnawialne">Zielona energia</a></li>
-                    <li><a href="#quiz">Quiz</a></li>
+            <nav className="bg-[#c8e6c9] py-4 flex justify-center">
+                <ul className="flex flex-wrap gap-6 text-[#2e7d32] font-bold text-lg">
+                    <li><a href="#ekologia" className="hover:underline">Ekologia</a></li>
+                    <li><a href="#energia" className="hover:underline">Energia</a></li>
+                    <li><a href="#odnawialne" className="hover:underline">Zielona energia</a></li>
+                    <li><a href="#quiz" className="hover:underline">Quiz</a></li>
                 </ul>
             </nav>
 
-            <main>
-                <section id="ekologia">
-                    <h2>🦋 Co to jest ekologia?</h2>
+            <main className="px-4 py-10 max-w-4xl mx-auto">
+                <section id="ekologia" className="bg-white mb-10 p-6 rounded-2xl shadow-md">
+                    <h2 className="text-2xl text-[#388e3c] font-bold mb-2">🦋 Co to jest ekologia?</h2>
                     <p>Ekologia to nauka o tym, jak żyją rośliny, zwierzęta i ludzie – i jak pomagamy naszej planecie!</p>
-                    <img src="ekologia.png" alt="Drzewo, zwierzęta i dzieci sadzące rośliny" />
+                    <img src="/ekologia.png" alt="Drzewo, zwierzęta i dzieci sadzące rośliny" className="mt-4 rounded-xl" />
                 </section>
 
-                <section id="energia">
-                    <h2>⚡ Skąd bierze się energia?</h2>
-                    <p>Energia to coś, co napędza świat! Potrzebujemy jej do światła, ogrzewania i jazdy autem.</p>
-                    <ul>
+                <section id="energia" className="bg-white mb-10 p-6 rounded-2xl shadow-md">
+                    <h2 className="text-2xl text-[#388e3c] font-bold mb-2">⚡ Skąd bierze się energia?</h2>
+                    <p className="mb-3">Energia to coś, co napędza świat! Potrzebujemy jej do światła, ogrzewania i jazdy autem.</p>
+                    <ul className="list-disc pl-5 space-y-1">
                         <li>Prąd z węgla (niezbyt ekologiczny)</li>
                         <li>Prąd ze słońca (super ekologiczny!)</li>
                         <li>Wiatraki i woda – też dają energię</li>
                     </ul>
                 </section>
 
-                <section id="odnawialne">
-                    <h2>🌞 Zielona energia</h2>
+                <section id="odnawialne" className="bg-white mb-10 p-6 rounded-2xl shadow-md">
+                    <h2 className="text-2xl text-[#388e3c] font-bold mb-2">🌞 Zielona energia</h2>
                     <p>To taka, która nie szkodzi Ziemi. Pochodzi ze słońca, wiatru i wody. Jest super dla środowiska!</p>
-                    <img src="zielona-energia.png" alt="Panele słoneczne, wiatraki, rzeka" />
+                    <img src="/zielona-energia.png" alt="Panele słoneczne, wiatraki, rzeka" className="mt-4 rounded-xl" />
                 </section>
 
-                <section id="quiz">
-                    <h2>🎉 Sprawdź się!</h2>
-                    <p>Wiesz już trochę o ekologii? Rozwiąż krótki quiz!</p>
-                    <button>Rozpocznij quiz</button>
+                <section id="quiz" className="bg-white p-6 rounded-2xl shadow-md text-center">
+                    <h2 className="text-2xl text-[#388e3c] font-bold mb-2">🎉 Sprawdź się!</h2>
+                    <p className="mb-4">Wiesz już trochę o ekologii? Rozwiąż krótki quiz!</p>
+                    <button className="px-8 py-4 bg-[#4caf50] hover:bg-[#388e3c] text-white font-bold text-lg rounded-full shadow-lg transition duration-300">
+                        Rozpocznij quiz
+                    </button>
                 </section>
             </main>
 
-            <footer>
-                <p>© 2025 Zielona Strona – Uczmy się razem!</p>
+            <footer className="text-center bg-[#a5d6a7] py-4 text-[#2e7d32] font-bold">
+                © 2025 Zielona Strona – Uczmy się razem!
             </footer>
-        </>
+        </div>
     );
 }
