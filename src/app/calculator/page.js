@@ -39,7 +39,7 @@ export default function Calculator() {
     };
 
     return (
-        <div>
+        <div className="h-screen bg-cover bg-center flex flex-col" style={{ backgroundImage: "url('/background.png')" }}>
             <header>
                 <Navbar />
             </header>
