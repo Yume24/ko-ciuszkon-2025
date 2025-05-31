@@ -1,8 +1,8 @@
 import Link from "next/link"
 
 export default function Navbar() {
-    const navItems = ['Strona główna', 'Kalkulator', 'Informacje edukacyjne', 'Gra edukacyjna'];
-    const routes = ['/', '/calculator', '/educational-info', '/game'];
+    const navItems = ['Strona główna', 'Kalkulator', 'Informacje edukacyjne', 'Quiz'];
+    const routes = ['/', '/calculator', '/educational-info', '/consumption-quiz'];
 
     return (
         <nav className="bg-[var(--hunter-green)] px-6 py-4 flex items-center justify-between rounded-3xl mx-5 mt-5 shadow-lg">
@@ -17,7 +17,7 @@ export default function Navbar() {
                 ))}
             </ul>
             <div className="text-3xl font-extrabold text-white hover:scale-105 transition-transform duration-300">
-                Baamboozle
+                Bomboclaat
             </div>
         </nav>
     );
